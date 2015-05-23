@@ -7,6 +7,12 @@
 <script src="countdown.js"></script>
 <script>
   var clock = document.getElementById("countdown-holder")
+    , targetDate = new Date(now.getFullYear,now.getMonth,now.getDate,12,0); 
+ 
+  clock.innerHTML = countdown(targetDate).toString();
+</script>
+<script>
+  var clock = document.getElementById("countdown-holder")
     , targetDate = new Date(now.getFullYear,now.getMonth,now.getDate,12,0);
  
   clock.innerHTML = countdown(targetDate).toString();
