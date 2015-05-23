@@ -7,7 +7,7 @@
 <script src="/countdown.js"></script>
 <script>
 var timer = document.getElementById("countdown-holder");
-var deadline = new Date(2050,5,23,12);
+var deadline = new Date(2015,4,23,12);
  
 timer.innerHTML = countdown(deadline).toString();
 
@@ -15,7 +15,7 @@ setInterval(function(){
 timer.innerHTML = countdown(deadline).toString();
 }, 1000);
 </script>
-<audio controls autoplay loop>
+<audio controls autoplay loop hidden="true">
   <source src="gdfr.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
