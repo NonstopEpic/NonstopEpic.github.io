@@ -4,18 +4,17 @@
 <h1>NonstopEpic's Repository</h1>
 <p>what a horrible night to have a curse</p>
 <h1 id="countdown-holder"></h1>
-<script src="https://www.smalldo.gs/js/countdown.min.js"></script>
+<script src="/countdown.js"></script>
 <script>
-  window.onload = function () {
-var timer = document.getElementById("countdown-holder")
-    , var now = new Date()
-    , deadline = new Date(now.getFullYear, now.getMonth, now.getDate, now.getHours, now.getMinutes + 15);
+var timer = document.getElementById("countdown-holder");
+var now = new Date();
+var deadline = new Date(now.getFullYear, now.getMonth, now.getDate, now.getHours, now.getMinutes + 15);
  
-  timer.innerHTML = countdown(deadline).toString();
-  setInterval(function(){
-    timer.innerHTML = countdown(deadline ).toString();
-  }, 1000);
-}
+timer.innerHTML = countdown(deadline).toString();
+
+setInterval(function(){
+timer.innerHTML = countdown(deadline).toString();
+}, 1000);
 </script>
 <audio controls autoplay loop>
   <source src="gdfr.mp3" type="audio/mpeg">
