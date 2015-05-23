@@ -6,7 +6,8 @@
 <h1 id="countdown-holder"></h1>
 <script src="https://www.smalldo.gs/js/countdown.min.js"></script>
 <script>
-  var timer = document.getElementById("countdown-holder")
+  window.onload = function () {
+var timer = document.getElementById("countdown-holder")
     , now = new Date()
     , deadline = new Date(now.getFullYear, now.getMonth, now.getDate, now.getHours, now.getMinutes + 15);
  
@@ -14,6 +15,7 @@
   setInterval(function(){
     timer.innerHTML = countdown(deadline ).toString();
   }, 1000);
+}
 </script>
 <audio controls autoplay loop>
   <source src="gdfr.mp3" type="audio/mpeg">
