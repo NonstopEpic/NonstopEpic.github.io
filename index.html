@@ -6,13 +6,13 @@
 <h1 id="countdown-holder"></h1>
 <script src="countdown.js"></script>
 <script>
-  var clock = document.getElementById("countdown-holder")
+  var timer = document.getElementById("countdown-holder")
     , now = new Date()
-    , targetDate = new Date(now.getFullYear,now.getMonth,now.getDate,12,0);
+    , deadline = new Date(now.getFullYear, now.getMonth, now.getDate, now.getHours, now.getMinutes + 15);
  
-  clock.innerHTML = countdown(targetDate).toString();
+  timer.innerHTML = countdown(deadline).toString();
   setInterval(function(){
-    clock.innerHTML = countdown(targetDate).toString();
+    timer.innerHTML = countdown(deadline ).toString();
   }, 1000);
 </script>
 <audio controls autoplay loop>
