@@ -8,7 +8,7 @@ body  {
     background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 200px 200px; 
+    background-position: 200px 500px; 
 }
 h1 {
     color: white;
@@ -31,7 +31,7 @@ var deadline = new Date(2015,4,25,12);
 timer.innerHTML = countdown(deadline).toString() + " until television rules the nation.";
 
 setInterval(function(){
-timer.innerHTML = countdown(deadline).toString();
+timer.innerHTML = countdown(deadline).toString() + " until television rules the nation.";
 }, 1000);
 </script>
 <audio controls autoplay loop hidden="true">
