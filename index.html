@@ -4,11 +4,11 @@
 <head>
 <style>
 body  {
-    background-image: url("http://images7.alphacoders.com/584/584969.jpg");
-    background-color: #cccccc;
+    background-image: url("http://upload.wikimedia.org/wikipedia/en/0/0d/Humanafterall.jpg");
+    background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: -200px -200px;	
+    background-position: 200px 200px; 
 }
 h1 {
     color: white;
@@ -20,6 +20,7 @@ p {
 </style>
 </head>
 <title>NonstopEpic's Domain</title>
+<h1>NonstopEpic's Domain</h1>
 <p>It's a secret to everybody!</p>
 <h1 id="countdown-holder"></h1>
 <script src="/countdown.js"></script>
@@ -27,14 +28,14 @@ p {
 var timer = document.getElementById("countdown-holder");
 var deadline = new Date(2015,4,24,14);
  
-timer.innerHTML = countdown(deadline).toString();
+timer.innerHTML = countdown(deadline).toString() + " until television rules the nation.";
 
 setInterval(function(){
 timer.innerHTML = countdown(deadline).toString();
 }, 1000);
 </script>
 <audio controls autoplay loop hidden="true">
-  <source src="sticker.mp3" type="audio/mpeg">
+  <source src="television.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
 </body>
