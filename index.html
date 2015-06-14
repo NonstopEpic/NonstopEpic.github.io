@@ -4,11 +4,10 @@
 <head>
 <style>
 body  {
-    background-image: url("http://upload.wikimedia.org/wikipedia/en/9/9c/Daftpunk-homework.jpg");
+    background-image: url("http://cdn.bleedingcool.net/wp-content/uploads/2015/05/b1c4c6_7b3d67563a9a4b9698eb8b3026861cb1.jpg");
     background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 500px 200px; 
 }
 h1 {
     color: white;
@@ -26,16 +25,94 @@ p {
 <script src="/countdown.js"></script>
 <script>
 var timer = document.getElementById("countdown-holder");
-var deadline = new Date(2015,4,25,17);
- 
-timer.innerHTML = countdown(deadline).toString() + " until the sad finale.";
+function keepTrack(deadline, event) { 
+timer.innerHTML = countdown(deadline).toString() + " until the " + event + ".";
 
 setInterval(function(){
-timer.innerHTML = countdown(deadline).toString() + " until the sad finale.";
+timer.innerHTML = countdown(deadline).toString() + " until the " + event + ".";
 }, 1000);
+}
+var offset = new Date().getTimezoneOffset();
+var current = Math.floor(Date.now()/1000);
+if (offset == 240) { //EST is 240 minutes behind UTC
+	if (current < 1434278400) { //Smash Direct
+	keepTrack(new Date(2015,5,14,10,40),"Smash Direct");
+	} else if (current < 1434304800) { //Nintendo World Championships
+	keepTrack(new Date(2015,5,14,18),"Nintendo World Championships");
+	} else if (current < 1434319200) { //Bethesda E3 Conference
+	keepTrack(new Date(2015,5,14,22),"Bethesda E3 Conference");
+	} else if (current < 1434371400) { //Microsoft E3 Conference
+	keepTrack(new Date(2015,5,15,12,30),"Microsoft E3 Conference");
+	} else if (current < 1434384000) { //EA E3 Conference
+	keepTrack(new Date(2015,5,15,16),"EA E3 Conference");
+	} else if (current < 1434391200) { //Ubisoft E3 Conference
+	keepTrack(new Date(2015,5,15,18),"Ubisoft E3 Conference");
+	} else if (current < 1434402000) { //Sony E3 Conference
+	keepTrack(new Date(2015,5,15,21),"Sony E3 Conference");
+	} else if (current < 1434456000) { //Nintendo Digital Event
+	keepTrack(new Date(2015,5,16,12),"Nintendo Digital Event");
+	} else if (current < 1434459600) { //Square Enix E3 Conference
+	keepTrack(new Date(2015,5,16,13),"Square Enix E3 Conference");
+	} else if (current < 1434484800) { //PC Gaming E3 Conference
+	keepTrack(new Date(2015,5,16,20),"PC Gaming E3 Conference");
+	} else {
+	timer.innerHTML = "Nothing to report at this time."
+	}
+} else if (offset == 420) { //PST is literally 420 minutes behind UTC
+	if (current < (1434278400 - 10800)) { //Smash Direct
+	keepTrack(new Date(2015,5,14,7,40),"Smash Direct");
+	} else if (current < (1434304800 - 10800)) { //Nintendo World Championships
+	keepTrack(new Date(2015,5,14,15),"Nintendo World Championships");
+	} else if (current < (1434319200 - 10800)) { //Bethesda E3 Conference
+	keepTrack(new Date(2015,5,14,19),"Bethesda E3 Conference");
+	} else if (current < (1434371400 - 10800)) { //Microsoft E3 Conference
+	keepTrack(new Date(2015,5,15,9,30),"Microsoft E3 Conference");
+	} else if (current < (1434384000 - 10800)) { //EA E3 Conference
+	keepTrack(new Date(2015,5,15,13),"EA E3 Conference");
+	} else if (current < (1434391200 - 10800)) { //Ubisoft E3 Conference
+	keepTrack(new Date(2015,5,15,15),"Ubisoft E3 Conference");
+	} else if (current < (1434402000 - 10800)) { //Sony E3 Conference
+	keepTrack(new Date(2015,5,15,18),"Sony E3 Conference");
+	} else if (current < (1434456000 - 10800)) { //Nintendo Digital Event
+	keepTrack(new Date(2015,5,16,9),"Nintendo Digital Event");
+	} else if (current < (1434459600 - 10800)) { //Square Enix E3 Conference
+	keepTrack(new Date(2015,5,16,10),"Square Enix E3 Conference");
+	} else if (current < (1434484800 - 10800)) { //PC Gaming E3 Conference
+	keepTrack(new Date(2015,5,16,17),"PC Gaming E3 Conference");
+	} else {
+	timer.innerHTML = "Nothing to report at this time."
+	}
+} else if (offset == 0) { //GMT is the same as UTC
+	if (current < (1434278400 + 14400)) { //Smash Direct
+	keepTrack(new Date(2015,5,14,14,40),"Smash Direct");
+	} else if (current < (1434304800 + 14400)) { //Nintendo World Championships
+	keepTrack(new Date(2015,5,14,22),"Nintendo World Championships");
+	} else if (current < (1434319200 + 14400)) { //Bethesda E3 Conference
+	keepTrack(new Date(2015,5,15,2),"Bethesda E3 Conference");
+	} else if (current < (1434371400 + 14400)) { //Microsoft E3 Conference
+	keepTrack(new Date(2015,5,15,16,30),"Microsoft E3 Conference");
+	} else if (current < (1434384000 + 14400)) { //EA E3 Conference
+	keepTrack(new Date(2015,5,15,20),"EA E3 Conference");
+	} else if (current < (1434391200 + 14400)) { //Ubisoft E3 Conference
+	keepTrack(new Date(2015,5,15,22),"Ubisoft E3 Conference");
+	} else if (current < (1434402000 + 14400)) { //Sony E3 Conference
+	keepTrack(new Date(2015,5,16,1),"Sony E3 Conference");
+	} else if (current < (1434456000 + 14400)) { //Nintendo Digital Event
+	keepTrack(new Date(2015,5,16,16),"Nintendo Digital Event");
+	} else if (current < (1434459600 + 14400)) { //Square Enix E3 Conference
+	keepTrack(new Date(2015,5,16,17),"Square Enix E3 Conference");
+	} else if (current < (1434484800 + 14400)) { //PC Gaming E3 Conference
+	keepTrack(new Date(2015,5,17,0),"PC Gaming E3 Conference");
+	} else {
+	timer.innerHTML = "Nothing to report at this time."
+	}
+} else { //You don't have a matching timezone
+timer.innerHTML = "Sorry, your timezone is not in our calculations."
+}
+
 </script>
 <audio controls autoplay loop hidden="true">
-  <source src="mothership.mp3" type="audio/mpeg">
+  <source src="sticker.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
 </body>
